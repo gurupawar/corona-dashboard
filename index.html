@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Covid-19</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="top__section">
+          <header class="header">
+            <div class="logo">
+              Covid-19
+            </div>
+            <menu class="munu">
+              <a href="">contact</a>
+              <a href="">API</a>
+              <a href="">more</a>
+            </menu>
+          </header>
+          <div class="search__box">          
+            <input type="text" placeholder="india" class="input__search" id="userInput" />
+              <button class="btn" onclick="test()">Search</button>           
+          </div>
+        </div>
+
+        <div class="content__section">
+          <div class="graph">
+            <canvas id="covid__data" width="110" height="55"></canvas>
+          </div>
+
+          <div class="stats">
+            <div class="card__group">
+              <div class="card card2">
+                <h2>State</h2>
+                <p class="state__name" id="state"></p>
+              </div>
+              <div class="card card3">
+                <h2>Recoverd</h2>
+                <p id="recovered"></p>
+              </div>
+            </div>
+            <div class="card__group">
+              <div class="card card1">
+                <h2>Total</h2>
+                <p id="confirmed"></p>
+              </div>
+              
+              <div class="card card4">
+                <h2>Deceased</h2>
+                <p id="deaths"></p>
+              </div>
+               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>
