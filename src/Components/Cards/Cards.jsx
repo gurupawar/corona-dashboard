@@ -10,9 +10,10 @@ const Cards = ({
   if (!confirmed) {
     return "Loading...";
   }
+
   return (
     <div className={styles.container}>
-      <label className={styles.global_data}>{country}</label>
+      <h2 className={styles.global_data}>{country}</h2>
       <div className={styles.card_container}>
         <div className={styles.card}>
           <h3>Infected</h3>

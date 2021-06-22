@@ -2,6 +2,7 @@ import React from "react";
 import { Cards, StatePicker } from "./Components";
 import styles from "./App.module.css";
 import { fetchData } from "./api";
+import Navbar from "./Components/Navbar/Navbar";
 class App extends React.Component {
   state = {
     data: {},
@@ -23,10 +24,13 @@ class App extends React.Component {
   render() {
     const { data, country } = this.state;
     return (
-      <div className={styles.container}>
-        <Cards data={data} country={country} />
-        <StatePicker handleCountryChange={this.handleCountryChange} />
-      </div>
+      <>
+        <Navbar />
+        <div className={styles.container}>
+          <StatePicker handleCountryChange={this.handleCountryChange} />
+          <Cards data={data} country={country} />
+        </div>
+      </>
     );
   }
 }

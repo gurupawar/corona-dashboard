@@ -12,6 +12,10 @@ const StatePicker = ({ handleCountryChange }) => {
     fetchApi();
   }, [setFetchedStates]);
 
+  if (!handleCountryChange) {
+    return "Loading...";
+  }
+
   return (
     <div>
       <select
